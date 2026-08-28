@@ -1,18 +1,19 @@
-﻿# Enterprise SQL & Word Mail Merge Document Automation
+﻿# SQL Server & Word Mail Merge Document Automation
 
-This repository demonstrates an end-to-end automated document generation workflow. It extracts raw transactional data from Microsoft SQL Server (**AdventureWorks2022**) and populates standardized Microsoft Word customer invoices and order confirmation notices using dynamic field formatting and conditional legal logic.
+Automates document generation by extracting order data from Microsoft SQL Server (`AdventureWorks2022`) to CSV and binding it to a Microsoft Word Mail Merge template (`.docx`). Presentation formatting (currency and dates) and conditional payment terms are handled entirely inside Word field codes to keep database queries clean.
 
 ---
 
-## Architecture & Data Flow
+## Workflow Overview
 
 ```text
-[ MSSQL Server (AdventureWorks2022) ] 
-                 │
-                 │ (T-SQL Query Export)
-                 ▼
-     [ mock_adventureworks_orders.csv ]
-                 │
-                 │ (Mail Merge Binding)
-                 ▼
-   [ Order_Confirmation_Template.docx ] ────► Finished Output Document
+MSSQL Server (AdventureWorks2022)
+          │
+          ▼ (T-SQL Query Export)
+data/mock_adventureworks_orders.csv
+          │
+          ▼ (Mail Merge Data Source)
+templates/Order_Confirmation_Template.docx
+          │
+          ▼
+Finished Customer Receipts & Invoices
