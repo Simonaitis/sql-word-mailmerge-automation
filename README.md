@@ -22,6 +22,6 @@ Finished Customer Receipts & Invoices
 ## Lessons Learned
 
 * **Keep database queries simple:** Raw dates and unformatted numbers should come straight out of SQL without complex string concatenation.
-* **Let Word handle formatting:** Using Word field switches (`\@` for dates, `\#` for currency) keeps presentation formatting where it belongs—in the document template.
-* **Use conditional logic in templates:** Using `{ IF }` fields in Word allows a single template to handle different order types (like online vs. wholesale) without creating multiple template files.
+* **Let Word handle formatting:** Using Word field switches (`\@` for dates, `\#` for currency) keeps presentation formatting where it belongs in the doc template.
+* **Use conditional logic in templates:** Using `{ IF }` fields in Word allows a single template to handle different order types (like online vs wholesale) without creating multiple template files.
 * **Decouple data from design:** Exporting to a clean CSV creates a simple handoff between the database and the reporting layer.
