@@ -17,10 +17,9 @@ templates/Order_Confirmation_Template.docx
           │
           ▼
 Finished Customer Receipts & Invoices
+```
 
----
-
-# Lessons Learned
+## Lessons Learned
 
 * **Keep database queries simple:** Raw dates and unformatted numbers should come straight out of SQL without complex string concatenation.
 * **Let Word handle formatting:** Using Word field switches (`\@` for dates, `\#` for currency) keeps presentation formatting where it belongs—in the document template.
