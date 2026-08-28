@@ -1,0 +1,4 @@
+﻿SalesOrderID,CustomerName,OrderDate,TotalDue,OrderType
+43659,"Jordan, Gustavo",2026-09-15,20565.18,Reseller
+43660,"Carreras, Amy",2026-09-16,1250.50,Online
+43661,"Ramos, Xavier",2026-09-18,34500.00,Reseller
